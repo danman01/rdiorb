@@ -79,7 +79,7 @@ class PrintAccessToken
                             :access_token_path => "/oauth/access_token",
                             :http_method => :post})
     consumer.http.read_timeout = 600
-    request_token = consumer.get_request_token({:oauth_callback => 'oob'})
+    request_token = consumer.get_request_token({:oauth_callback => 'socialsongq.com'})
     url = 'https://www.rdio.com/oauth/authorize?oauth_token=' + 
       request_token.token.to_s      
     oauth_verifier = get_pin url
